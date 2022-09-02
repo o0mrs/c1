@@ -1,38 +1,16 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+.bga{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2e2447+0,1f2029+100 */
+background: rgb(46,36,71); /* Old browsers */
+background: -moz-linear-gradient(top,  rgb(42, 32, 65) 0%, rgba(31,32,41,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(46,36,71,1) 0%,rgba(31,32,41,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgb(39, 30, 60) 0%,rgba(31,32,41,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e2447', endColorstr='#1f2029',GradientType=0 ); /* IE6-9 */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.roboto{
+font-family: 'Roboto', sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.b{
+    -webkit-tap-highlight-color: transparent;
 }

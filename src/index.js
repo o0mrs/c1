@@ -1,14 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import { unregister } from './serviceWorker';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.unregister();
+
+    if (caches) {
+      // Service worker cache should be cleared with caches.delete()
+      caches.keys().then(async (names) => {
+        await Promise.all(names.map(name => caches.delete(name)));
+      });
+    }
+  });
+}
+// serviceWorkerRegistration.register();
+
+// let installPromptEvent;
+
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Prevent Chrome <= 67 from automatically showing the prompt
+  event.preventDefault();
+  // Stash the event so it can be triggered later.
+  // installPromptEvent = event;
+  // Update the install UI to notify the user app can be installed
+});
+ReactDOM.render(
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>,
+
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
