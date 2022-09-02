@@ -4,8 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { hop } from "@onehop/client";
 // import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 // import { unregister } from './serviceWorker';
+hop.init({
+	projectId: "project_NDk5Mzk2MTA4ODY4NjA4MDc"
+});
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.ready.then(registration => {

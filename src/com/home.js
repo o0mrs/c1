@@ -1,11 +1,33 @@
 import '../App.css'
 import NavBar from './navbar';
+import { useReadChannelState } from '@onehop/react';
+
+import { useChannelMessage } from '@onehop/react';
+import { useEffect,useState } from 'react';
+
 const Home = ()=>{
+     const { state } = useReadChannelState('dd');
+    
+	const [chatMessages, setChatMessages] = useState([]);
+
+	// in this example, USER_MESSAGE is an event that you'd send to the channel from your backend
+    useChannelMessage('dd', 'MSG', (message)=> {
+
+            setChatMessages([...chatMessages, message]);
+
+   
+    });
+
+
     return(
 <div className="max-w-[100vw] bga h-[96rem] ">
 
 <NavBar />
 <div>
+    {chatMessages.map((message, index) => {
+        
+        console.log(chatMessages)
+    })}
     <div className="flex items-center justify-center text-white sm:mt-16 md:mt-36
     +">
         <div className="sm:max-w-[90vw] md:max-w-[90rem] text-5xl md:text-7xl text-center font-bold roboto">Your new <br className='md:hidden'/> way to shop</div>

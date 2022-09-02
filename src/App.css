@@ -14,3 +14,7 @@ font-family: 'Roboto', sans-serif;
 .b{
     -webkit-tap-highlight-color: transparent;
 }
+*{
+    -webkit-tap-highlight-color: transparent;
+
+}
