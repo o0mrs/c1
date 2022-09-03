@@ -36,7 +36,7 @@ const NavBar = ()=>{
 
 
     <div class="dropdown">
-    <img tabindex="0" className="md:h-[3.2rem] md:w-[3.2rem] sm:h-[3.3rem] sm:mt-2 md:mt-0 float-right  sm:w-[3.1rem] rounded-full" alt='logo' src={pfp}></img>
+    <img tabindex="0" className="md:h-[2.6rem] md:w-[2.6rem] md:mt-2 sm:h-[2.6rem] sm:mt-2 float-right  sm:w-[2.6rem] rounded-full" alt='logo' src={pfp}></img>
 
   <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-300 text-white rounded-box mt-16 ml-6 w-52">
     <li><a>Item 1</a></li>
