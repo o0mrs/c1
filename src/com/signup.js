@@ -70,24 +70,24 @@ const Signup = ()=>{
             {stage == 1 && (
                 <div className='grid mt-7 place-items-center'>
             <div onClick={Signupa} className='w-[70%] flex h-12 rounded-xl cursor-pointer justify-center border bg-[#121416] pt-3 text-center  border-[#181b1d]'>
-            <i class="fa-brands fa-google mt-[0.19rem] mr-2"></i>
-            <div class='-mt-[0.1rem] cursor-pointer'><a>Continue with Google</a></div>
+            <i className="fa-brands fa-google mt-[0.19rem] mr-2"></i>
+            <div className='-mt-[0.1rem] cursor-pointer'><a>Continue with Google</a></div>
             </div>
             <div onClick={Github} className='w-[70%] mt-4 flex h-12 rounded-xl cursor-pointer justify-center border bg-[#121416] pt-3 text-center  border-[#181b1d]'>
-            <i class="fa-brands fa-github mt-[0.19rem] mr-2"></i>
-            <div class='-mt-[0.1rem] cursor-pointer'><a>Continue with Github </a></div>
+            <i className="fa-brands fa-github mt-[0.19rem] mr-2"></i>
+            <div className='-mt-[0.1rem] cursor-pointer'><a>Continue with Github </a></div>
             </div>
             <div onClick={Twitter} className='w-[70%] mt-4 flex h-12 rounded-xl cursor-pointer justify-center border bg-[#121416] pt-3 text-center  border-[#181b1d]'>
-            <i class="fa-brands fa-twitter mt-[0.19rem] mr-2"></i>
-            <div class='-mt-[0.1rem] cursor-pointer'><a>Continue with Twitter </a></div>
+            <i className="fa-brands fa-twitter mt-[0.19rem] mr-2"></i>
+            <div className='-mt-[0.1rem] cursor-pointer'><a>Continue with Twitter </a></div>
             </div>
-            <div class="divider w-[75%]"></div> 
-            <label class="input-group w-[70%]">
-                <span class='bg-[#171a1d] w-2'><i class="fa-regular fa-envelope"></i></span>
-                <input type="text" placeholder="info@site.com" class="input w-[100%] 	 focus:outline-none		 bg-[#171a1d]" />
+            <div className="divider w-[75%]"></div> 
+            <label className="input-group w-[70%]">
+                <span className='bg-[#171a1d] w-2'><i className="fa-regular fa-envelope"></i></span>
+                <input disabled type="text" placeholder="info@site.com" className="input w-[100%] 	 focus:outline-none		 bg-[#171a1d]" />
               </label>
             
-            <button onClick={()=>{setstage(2)}} className='btn btn-outline btn-accent mt-5 w-[70%]'>NEXT</button>
+            <button  className='btn btn-outline btn-accent mt-5 w-[70%]'>ONLY 3rd party availbe</button>
             </div>
             )}
             
@@ -96,15 +96,15 @@ const Signup = ()=>{
                     <div className='grid mt-7 place-items-center'>
             
             
-            <label class="input-group w-[70%]">
-                <span class='bg-[#171a1d] w-2'><i class="fa-solid fa-key"></i></span>
-                <input type="password" placeholder="Password" class="input w-[100%] focus:outline-none	 input-active bg-[#171a1d]" />
+            <label className="input-group w-[70%]">
+                <span className='bg-[#171a1d] w-2'><i className="fa-solid fa-key"></i></span>
+                <input type="password" placeholder="Password" className="input w-[100%] focus:outline-none	 input-active bg-[#171a1d]" />
               </label>
             
             <button onClick={()=>{setstage(2)}} className='btn btn-outline btn-accent mt-5 w-[70%]'>NEXT</button>
-            <div class='w-[70%] grid place-items-cdenter mt-3 cursor-pointer'>
-                <div class='text-left text-xs' onClick={()=>{setstage(1)}}>
-                <i class="fa-solid text-left fa-chevron-left text-[0.5rem] -mt-[04.3rem]" onClick={()=>{setstage(1)}}></i> Back
+            <div className='w-[70%] grid place-items-cdenter mt-3 cursor-pointer'>
+                <div className='text-left text-xs' onClick={()=>{setstage(1)}}>
+                <i className="fa-solid text-left fa-chevron-left text-[0.5rem] -mt-[04.3rem]" onClick={()=>{setstage(1)}}></i> Back
             
                 </div>
             </div>

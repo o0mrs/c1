@@ -4,10 +4,10 @@ import { useReadChannelState } from '@onehop/react';
 
 import { useChannelMessage } from '@onehop/react';
 import { useEffect,useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 const Home = ()=>{
      const { state } = useReadChannelState('dd');
-    
+     let navigate = useNavigate();
 	const [chatMessages, setChatMessages] = useState([useReadChannelState('dd')]);
 
 	// in this example, USER_MESSAGE is an event that you'd send to the channel from your backend
@@ -38,7 +38,9 @@ some random text with alot and alot and alot of texttex ttexttext  texttexttext 
 
         </div>
         <div className="grid place-items-center mt-7">
-        <button className="btn  hover:shadow-md b border-0 hover:bg-white hover:shadow-[#ffffff6a] btn-md bg-white focus:text-black focus:bg-white outline-0 text-black text btn-lg md:mt-6 roboto" >Start</button>
+        <button className="btn  hover:shadow-md b border-0 hover:bg-white hover:shadow-[#ffffff6a] btn-md bg-white focus:text-black focus:bg-white outline-0 text-black text btn-lg md:mt-6 roboto" onClick={()=>{
+            navigate('/auth',{replace:true})
+        }}>Start</button>
                 </div>
                 <div className="grid place-items-center mt-14 ">
                     <div className="sm:max-w-[91vw] md:max-w-[45rem]">

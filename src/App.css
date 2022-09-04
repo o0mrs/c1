@@ -18,3 +18,37 @@ font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
 
 }
+#dds{
+    width: 96vw;
+    }
+    #m22{
+      margin-bottom: 74rem;
+    }
+    #msgg{
+      width: auto;
+      max-width: 20rem;
+    }
+    #inmsg{
+        width: 100%; 
+       height: 40px;
+       justify-content: center;
+       align-items: center;
+       position: fixed;
+       bottom: 4px;
+       font-family: 'Cairo', sans-serif;
+      }
+      #inmsgcam{
+       bottom: 12px;
+       justify-content: center;
+       align-items: center;
+       position: fixed;
+      }
+      #inmsgsend{
+       font-family: 'Cairo', sans-serif;
+       justify-content: center;
+       align-items: center;
+       position: fixed;
+       bottom: -0px;
+       right: 16px;
+      }
+     

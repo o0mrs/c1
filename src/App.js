@@ -6,7 +6,8 @@ import {
 import Signup from "./com/signup";
 import Home from "./com/home";
 import Main from "./com/main";
-import Tr from "./com/play/t";
+import Tr from "./com/play/a";
+import Chat from "./com/play/t";
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
       <Route path="/auth" element={<Signup />}></Route>
       <Route path="/home" element={<Main />}></Route>
       <Route path="/play/t" element={<Tr />}></Route>
+      {/* <Route path="/play/Chat" element={<Chat />}></Route> */}
+      
       </Routes>
   </>
   );

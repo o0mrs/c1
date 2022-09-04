@@ -3,6 +3,8 @@ import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged ,GoogleAuthProvider,signInWithRedirect,signOut,GithubAuthProvider,signInWithPopup,TwitterAuthProvider} from "firebase/auth";
 import { useState, } from "react";
 import { getFirestore } from "firebase/firestore";
+import { getDatabase, ref, set,onDisconnect } from "firebase/database";
+
 import { addDoc, collection } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBnq3jxJPLAHZVzM7dbVK6fYc_zWAwuCPA",
@@ -11,16 +13,22 @@ const firebaseConfig = {
   storageBucket: "c1com-fae54.appspot.com",
   messagingSenderId: "985908238030",
   appId: "1:985908238030:web:e0271c2dde819fc179629f",
-  measurementId: "G-J42CTXNDCQ"
+  measurementId: "G-J42CTXNDCQ",
+  databaseURL: "https://c1com-fae54-default-rtdb.firebaseio.com/",
 };
+
 export const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 const providergithub = new GithubAuthProvider();
 const providertwiiter = new TwitterAuthProvider();
-
 export const auth = getAuth();
+export const database = getDatabase(app);
+export const dbRef = ref(getDatabase());
+
 export const Logouta = ()=>{
+
+
     signOut(auth).then(() => {
     // Sign-out successful.
     console.log('done')
